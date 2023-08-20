@@ -1,1 +1,19 @@
-@import "../layouts/nav.scss"
+@import "../components/navigation.scss";
+@import "../components/primaryContainer.scss";
+@import "../components/mobileNav.scss";
+@import "../components/trending.scss";
+@import "../components/secondaryMenuExpand.scss";
+@import "../components/primaryOffer.scss";
+@import"../variables/config.scss";
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 4; 
+    transition: opacity 0.3s ease-in-out;
+  }
