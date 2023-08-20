@@ -1,18 +1,232 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ef-frontend-dev-task</title>
-  </head>
-  <body>
-    <div class="landing">
-      <div class="nav-container">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EF Task</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <div class="mainContainer">
+    <div class="header">
+      <a href="/" class="logo">
+        <img src="/logo.webp" alt="brand-logo">
+      </a>
+      <div class="navBar">
+        <div class="headerPrimaryMenu">
+          <a href="">Treding </a>
+          <a href="">Pre-orders</a>
+          <a href="">Upcoming</a>
+          <a href="">Support24/7</a>
+        </div>
+        <div class="headerSecondaryMenuContainer" id="headerSecondaryMenuContainer">
+          <div class="headerSecondaryMenu">
+            <div class="navIcon" id="pcMenu">
+              <i class="fa-solid fa-desktop"></i>
+              <a>PC</a>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="navIcon">
+              <i class="fa-brands fa-playstation"></i>
+              <a href="">Playstation </a>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="navIcon">
+              <i class="fa-brands fa-xbox"></i>
+              <a href="">Xbox</a>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="navIcon">
+              <img src="/nintendo.svg" alt="nintendo">
+              <a href="">Nintendo/7</a>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="searchIcon" id="searchIcon">
+            <div class="search" id="search">
+              <i class="fas fa-search search-btn"></i>
+            </div>
+          </div>
+          <div class="searchExpand" id="searchExpand">
+            <input type="text" name="search" placeholder="Minecraft, RPG, multiplayer..." class="searchInput"
+              id="searchInput">
+            <a class="advancedSearch">Advanced search</a>
+            <i class="fa-solid fa-times searchcloseButton" id="closeSearch"></i>
+          </div>
+        </div>
+
+      </div>
+      <div class="iconContainer">
+        <img class="cartIcon" src="/cartIcon.svg" alt="cartIcon">
+        <i class="fa-regular fa-user accountIcon"></i>
       </div>
     </div>
 
-    <script type="module" src="main.js"></script>
-  </body>
+    <div class="secondaryMenuExpand" id="secondaryMenuExpand">
+      <div class="secondaryMenuOptionsContainer">
+        <div class="menuHead">
+          <h4>Platforms</h4>
+          <p>View all</p>
+        </div>
+        <div class="menuOptions">
+          <div class="option">
+            <i class="fa-brands fa-steam"></i>
+            <p>Steam</p>
+          </div>
+          <div class="option">
+            <i class="fa-brands fa-steam"></i>
+            <p>Ubisoft Connect</p>
+          </div>
+          <div class="option">
+            <i class="fa-brands fa-steam"></i>
+            <p>EA App</p>
+          </div>
+          <div class="option">
+            <i class="fa-brands fa-steam"></i>
+            <p>Battle.net</p>
+          </div>
+          <div class="option">
+            <i class="fa-brands fa-steam"></i>
+            <p>Rockstar</p>
+          </div>
+          <div class="option">
+            <i class="fa-brands fa-steam"></i>
+            <p>GOG.com</p>
+          </div>
+          <div class="option">
+            <i class="fa-brands fa-steam"></i>
+            <p>Microsoft Store</p>
+          </div>
+          <div class="option">
+            <img src="/icons/epic.png" class="optionImage"></img>
+            <p>Epic</p>
+          </div>
+        </div>
+      </div>
+      <div class="secondaryMenuOptionsContainer">
+        <div class="menuHead">
+          <h4>Platforms</h4>
+          <p>View all</p>
+        </div>
+        <div class="menuOptionsLarge">
+          <div class="optionLarge">
+            <img src="/icons/steam-wide.png" class="optionImage"></img>
+            <p>Steam Gift Cards</p>
+          </div>
+          <div class="optionLarge">
+            <img src="/icons/steam-wide.png" class="optionImage"></img>
+            <p>IG Gift Cards</p>
+          </div>
+          <div class="optionLarge">
+            <img src="/icons/steam-wide.png" class="optionImage"></img>
+            <p>Blizzard Gift Cards</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bannerTextContainer">
+      <h5>In 15 days</h5>
+      <h1>Starfield Digital Premium
+        Editional + Early Access</h1>
+      <div class="bannerPrice">
+        <div class="discountContainer">
+          <p class="discount">
+            -25%
+          </p>
+        </div>
+        <h3>19.99$</h3>
+      </div>
+    </div>
+  </div>
+  
+  <div class="overlay" id="overlay"></div>
+  <div class="headerContainerMobile" id="headerContainerMobile">
+    <div class="mobileMenu">
+      <div class="navIcon">
+        <i class="fa-solid fa-bars" id="mobileMenuButton"></i>
+        <img src="/logo.webp" alt="brand-logo" class="logo">
+      </div>
+
+      <div class="iconContainer">
+        <img class="cartIcon" src="/cartIcon.svg" alt="cartIcon">
+        <i class="fa-regular fa-user accountIcon"></i>
+        <div></div>
+        <i class="fas fa-search searchIcon"></i>
+      </div>
+    </div>
+    <div class="bannerTextContainer">
+      <h5>In 15 days</h5>
+      <h1>Starfield Digital Premium
+        Editional + Early Access</h1>
+      <div class="bannerPrice">
+        <div class="discountContainer">
+          <p class="discount">
+            -25%
+          </p>
+        </div>
+        <h3>19.99$</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trending -->
+  <div class="cardContainer">
+    <div class="cardheader">
+      <h2>Trending</h2>
+      <button class="cardButton">View all</button>
+    </div>
+
+    <div class="cardBodyContainer">
+      <div class="cardBody">
+        <div class="cardImageContainer">
+          <div class="cardImage">
+            <img src="/sengoku.webp" alt="cartIcon">
+          </div>
+          <p class="discount">
+            -26%
+          </p>
+        </div>
+        <div class="cardFooter">
+          <h4>Sengoku Dynasty</h4>
+          <h3>19.99$</h3>
+        </div>
+      </div>
+      <div class="cardBody">
+        <div class="cardImageContainer">
+          <div class="cardImage">
+            <img src="/simsHorse.webp" alt="cartIcon">
+          </div>
+          <p class="discount">
+            23%
+          </p>
+        </div>
+        <div class="cardFooter">
+          <h4>The Sims 4 Horse Ranch</h4>
+          <h3>19.99$</h3>
+        </div>
+      </div>
+      <div class="cardBody">
+        <div class="cardImageContainer">
+          <div class="cardImage">
+            <img src="/remnant.webp" alt="cartIcon">
+          </div>
+          <p class="discount">
+            26%
+          </p>
+        </div>
+        <div class="cardFooter">
+          <h4>Remnant 2</h4>
+          <h3>19.99$</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+
 </html>
